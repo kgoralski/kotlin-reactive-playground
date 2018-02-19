@@ -13,7 +13,7 @@ docker run -d -p 27017:27017 --name mongodb -d mongo
 
 Requests:
 1. will fetch repository from github and save to mongodb
-2. will fetch all github repositories and save them to mongodb
+2. will fetch all github repositories by user and save them to mongodb
 3. will fetch saved repositories from mongodb
 
 ```bash
