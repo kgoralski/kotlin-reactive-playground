@@ -17,8 +17,7 @@ class RepositoryDetailsEndpoint(
             @PathVariable("owner") owner: String,
             @PathVariable("repositoryName") repositoryName: String): Flux<GithubRepository> {
 
-        val githubRepository: Flux<GithubRepository> = githubClient.getRepository(owner, repositoryName)
-        return githubRepository.flatMap { it -> entityRepository.save(it) }
+        return githubClient.getRepository(owner, repositoryName).flatMap { it -> entityRepository.save(it) }
     }
 
     @GetMapping(value = ["/repositories/{owner}"], produces = [(MediaType.APPLICATION_JSON_VALUE)])
