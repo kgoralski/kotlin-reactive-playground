@@ -1,0 +1,5 @@
+package pl.goralski.kotlinreactiveplayground
+
+import org.springframework.data.repository.reactive.ReactiveCrudRepository
+
+interface ReactiveEntityGithubRepository : ReactiveCrudRepository<GithubRepository, Int>
